@@ -1,0 +1,94 @@
+- Class: meta
+  Course: CatsTeachStats
+  Lesson: Cats_part3_ver1
+  Author: Jenny Hazlehurst
+  Type: Standard
+  Organization: Catisticians Unite!
+  Version: 2.4.3
+  
+- Class: text
+  Output: Now that you know WHY we need statistics, let's TRY some statistics
+
+- Class: mult_question
+  Output: What type of data did you collect from the video?
+  AnswerChoices: binary;continuous;discrete
+  CorrectAnswer: binary
+  AnswerTests: omnitest(correctVal="binary")
+  Hint: A series of trials with outcomes like this is called binomial
+
+- Class: exact_question
+  Output: How many different variables did you measure?
+  CorrectAnswer: 1
+  AnswerTests: omnitest(correctVal = 1)
+  Hint: You may have measured this variable in different directions, but it is still the same variable...
+
+- Class: text
+  Output: To find out what kind of statistical test you need to use to test your hypothesis about your data, a good place to start is a Google search. 
+
+- Class: video
+  Output: Try Googling the TYPE of data you have and the NUMBER OF VARIABLES you measured!
+  VideoLink: https://www.google.com/
+
+- Class: video
+  Output: Hopefully you found the BINOMIAL TEST. Hit 'yes' to to the web to see how to do this in R.
+  VideoLink: http://www.instantr.com/2012/11/06/performing-a-binomial-test/
+
+- Class: text
+  Output: The binomial test will compare your data to a binomial distribution, which shows the probability of obtaining a certain outcome (in our case, a left boop or a right boop) a given number of times out of the total trials you conducted.
+
+- Class: text
+  Output: The binomial distribution you compare your data to with a binomial test will change depending on two variables, p (probability of the outcome of interest - say, a Left boop - if all outcomes are equally likely) and n (the number of trials; how many boop events did you observe?) 
+
+- Class: exact_question
+  Output: Let's start by figuring out how to calculate our probability "p"; If we assume that WPJ will always boop the ball, what is the probability that he will boop the ball?
+  CorrectAnswer: 1
+  AnswerTests: omnitest(correctVal = 1)
+  Hint: If something will definitely happen, it has a 100% chance of occurring or a probability of 1. 
+  
+- Class: exact_question
+  Output: If we assume that WPJ is equally likely to boop either left or right (2 possible outcomes), what is the probability of a Left Boop? 
+  CorrectAnswer: 0.5
+  AnswerTests: omnitest(correctVal = 0.5)
+  Hint: Divide 1 by the number of possible outcomes
+
+- Class: exact_question
+  Output: Just as an example, let's say that we watch WPJ boop the ball 10 times. In this case, n = ?
+  CorrectAnswer: 10
+  AnswerTests: omnitest(correctVal = 10)
+  Hint: Divide 1 (the probability of either a left or right boop occurring) by 2 (since both are equally likely)
+
+- Class: figure
+  Output: Check out this graph of the Binomial Distribution with probability p=0.5 and number of trials n=10!
+  Figure: Figure.R
+  FigureType: new
+  
+- Class: cmd_question
+  Output: set a value for n from your data; how many total boops did you observe? Use n <- NUMBER OF BOOPS OBSERVED
+  CorrectAnswer: n <- 13
+  AnswerTests: var_is_a('numeric', 'n')
+  Hint: use <- to assign a numeric value to n, for example n<- 5
+
+- Class: cmd_question
+  Output: set a value for p, the probability of a Left or Right boop (as we assume they have equal probability)?
+  CorrectAnswer: p <- 0.5
+  AnswerTests: var_is_a('numeric', 'p');omnitest(correctExpr = 'p <- 0.5')
+  Hint: use <- to assign a probability to p (between 0 and 1), and look at your answer to one of the earlier questions!
+
+- Class: cmd_question
+  Output: Plot the binomial distribution using the n and p values from your data, like this plot.binomial.distribution(n,p)
+  CorrectAnswer: plot.binomial.distribution(n,p)
+  AnswerTests: omnitest(correctExpr = 'plot.binomial.distribution(n,p)')
+  Hint: Earlier you assigned the appropriate values to n and p, so R will remember them in the script for this plot.
+
+- Class: cmd_question
+  Output: Now, make a vector of the number of Left boops and Right boops (2 numbers) and call that vector x. For example, x<- c(Left boops, Right boops)
+  CorrectAnswer: x<- c(5,2)
+  AnswerTests: expr_uses_func('c')
+  Hint: use x<- c(#L, #R)
+
+- Class: cmd_question
+  Output: Now, run a binomial test on your data, using the same p and n value. Use the command binom.test() that you looked up on line earlier.
+  CorrectAnswer: binom.test(x,n,p)
+  AnswerTests: omnitest(correctExpr='binom.test(x,n,p)')
+  Hint: Remember, you have already defined the values of x, n, and p. If you still need help, try typing ?binom.test.
+
