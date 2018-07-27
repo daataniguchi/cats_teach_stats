@@ -59,7 +59,7 @@
 
 
 - Class: cmd_question
-  Output: OK, now let's store your real data into variables! First, remake the left variable with the left paw count you made from the video.
+  Output: OK, now let's store your real data into variables! First, remake the left variable but use the real left paw count you made from the video.
   CorrectAnswer: left <- 24
   AnswerTests: omnitest(correctExpr='left <- 24')
   Hint: check your count - you should have found 24 left-paw boops
@@ -90,7 +90,7 @@
 - Class: cmd_question
   Output: Try making a vector of the left and right variables you made in earlier steps. Use the c() function that you just learned. You know you did it right if you get 24 21
   CorrectAnswer: c(left, right)
-  AnswerTests: omnitest(correctExpr='c(left, right)'')
+  AnswerTests: omnitest(correctExpr='c(left, right)')
   Hint: go to the help file by typing c?
 
 - Class: cmd_question
