@@ -1,0 +1,122 @@
+- Class: meta
+  Course: CatsTeachStats
+  Lesson: Cats1
+  Author: Jenny Hazlehurst, Darcy Taniguchi, and Suann Yang
+  Type: Standard
+  Organization: 
+  Version: 2.4.3
+
+- Class: text
+  Output: Welcome to Cats Teach Stats!
+
+- Class: text
+  Output: Cats are the purrfect teachers for all students.
+
+- Class: mult_question
+  Output: Do you like to watch cat videos?
+  AnswerChoices: Yes;No;Maybe
+  CorrectAnswer: Yes
+  AnswerTests: omnitest(correctVal='Yes')
+  Hint: You should choose Yes
+
+- Class: text
+  Output: This lesson is taught by William Plumer Jacobs, catistician.
+
+- Class: text
+  Output: Hi. I am going to teach you to record a small data set and bring it into R.
+
+- Class: text
+  Output: First you need to collect some data.
+
+- Class: video
+  Output: Go to this online video of me, and count the number of times I use my left vs. right paw to boop the ball around the track.
+  VideoLink: https://drive.google.com/file/d/17TA2HzPbYalYyy4o-TrwZjd8ls-Eyutm/view
+
+- Class: text
+  Output: Got your counts of left and right paw usage? If not, go watch the video again.
+  
+
+- Class: text
+  Output: You will store your left paw count and right paw count into two separate variables.
+
+- Class: text
+  Output: There are two components to a variable.
+
+- Class: text
+  Output: The name of the variable is one part.
+
+- Class: text
+  Output: The information that we want to store is the second part.
+
+- Class: cmd_question
+  Output: Let's pretend that I used my left paw twice. Make a variable of this left paw count by typing left <- 2
+  CorrectAnswer: left <- 2
+  AnswerTests: omnitest(correctExpr='left <- 2')
+  Hint: try typing left <- 2
+
+- Class: text
+  Output: So what you just did was make a variable called "left," which stores the number 2. 
+
+
+- Class: cmd_question
+  Output: OK, now let's store your real data into variables! First, remake the left variable with the left paw count you made from the video.
+  CorrectAnswer: left <- 24
+  AnswerTests: omnitest(correctExpr='left <- 24')
+  Hint: check your count - you should have found 24 left-paw boops
+
+- Class: cmd_question
+  Output: You can check to see what R thinks is stored in your variable by typing left
+  CorrectAnswer: left
+  AnswerTests: omnitest(correctExpr='left')
+  Hint: type "left" (no quotes)
+  
+- Class: cmd_question
+  Output: Now, make a new right variable with your right paw count.
+  CorrectAnswer: right <- 21
+  AnswerTests: omnitest(correctExpr='right <- 21')
+  Hint: check your count - you should have found 21 right-paw boops. right <- 21
+
+- Class: text
+  Output: Variables can be many kinds of things. We can make a variable that stores left and right paw counts in that order.
+
+- Class: text
+  Output: This kind of variable, when multiple things are stored in it, is called a vector.
+
+- Class: text
+  Output: We'll make a vector with the c() function. The c stands for "concatenate" or "combine". For example, c(2, 4) makes a vector that has two numbers in it.
+
+
+
+- Class: cmd_question
+  Output: Try making a vector of the left and right variables you made in earlier steps. Use the c() function that you just learned. You know you did it right if you get 24 21
+  CorrectAnswer: c(left, right)
+  AnswerTests: omnitest(correctExpr='c(left, right)'')
+  Hint: go to the help file by typing c?
+
+- Class: cmd_question
+  Output: Now that you've made a vector of your data, store it in a new variable called boops.
+  CorrectAnswer: boops <- c(left, right)
+  AnswerTests: omnitest(correctExpr='boops <- c(left, right)')
+  Hint: boops should be on the left side of the <- symbol, and c(left, right) comes next
+
+- Class: cmd_question
+  Output: Check to see what R thinks is stored in your boops variable.
+  CorrectAnswer: boops
+  AnswerTests: omnitest(correctExpr='boops')
+  Hint: Just type "boops" (no quotes).
+  
+  
+
+- Class: video
+  Output: We have now recorded some data and communicated the data to R for later use. Let's wrap up by finding out what kind of data we have. Go watch this video on types of data.
+  VideoLink: https://365datascience.com/explainer-video/types-data/
+
+- Class: mult_question
+  Output: What is the best data classification for the number of boops?
+  AnswerChoices: numerical and discrete;categorical and continuous;numerical and continuous
+  CorrectAnswer: numerical and discrete
+  AnswerTests: omnitest(correctVal='numerical and discrete')
+  Hint: There is no such thing as half a boop.
+
+- Class: text
+  Output: You have reached the end of this lesson on recording and entering a simple data set. Congratulations!
