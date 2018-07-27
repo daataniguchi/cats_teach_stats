@@ -60,16 +60,16 @@
   Output: Now you are going to create your own bar plot
   
 - Class: cmd_question
-  Output: In the R console, assign to the variable "right" the number 24, an example of right paw boops counted.
-  CorrectAnswer: right <-24
-  AnswerTests: omnitest(correctExpr='right <- 24')
-  Hint: Type right <- 24 in the console. Don't forget that R is case sensitive.
+  Output: In the R console, assign to the variable "right" the number 21, an example of right paw boops counted.
+  CorrectAnswer: right <-21
+  AnswerTests: omnitest(correctExpr='right <- 21')
+  Hint: Type right <- 21 in the console. Don't forget that R is case sensitive.
   
 - Class: cmd_question
-  Output: Now assign to the variable "left" the number 21, an example of the left paw boops counted.
-  CorrectAnswer: left<-21
-  AnswerTests: omnitest(correctExpr='left<-21')
-  Hint: Type left <- 21 in the console
+  Output: Now assign to the variable "left" the number 24, an example of the left paw boops counted.
+  CorrectAnswer: left<-24
+  AnswerTests: omnitest(correctExpr='left<-24')
+  Hint: Type left <- 24 in the console
   
 - Class: cmd_question
   Output: To create your bar plot, type barplot(c(right,left))
