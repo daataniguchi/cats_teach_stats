@@ -28,7 +28,7 @@
 - Class: text
   Output: First you need to collect some data.
 
-- Class: video
+- Class: video#What pops up on the console is "Yes or No?" I'd suggest adding to the beginning "Type "Yes" to go to this online video...."
   Output: Go to this online video of me, and count the number of times I use my left vs. right paw to boop the ball around the track.
   VideoLink: https://drive.google.com/file/d/17TA2HzPbYalYyy4o-TrwZjd8ls-Eyutm/view
 
@@ -107,7 +107,7 @@
   
   
 
-- Class: video
+- Class: video#Same comment as before about adding in "Type "Yes" to go watch this video on types of data."
   Output: We have now recorded some data and communicated the data to R for later use. Let's wrap up by finding out what kind of data we have. Go watch this video on types of data.
   VideoLink: https://365datascience.com/explainer-video/types-data/
 

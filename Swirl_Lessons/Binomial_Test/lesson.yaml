@@ -25,12 +25,12 @@
 - Class: text
   Output: To find out what kind of statistical test you need to use to test your hypothesis about your data, a good place to start is a Google search. 
 
-- Class: video
+- Class: video#What pops up in r with this question is "Yes or No" which doesn't quite make sense.  Maybe add to the beginning "Type "Yes" to try Googling...." 
   Output: Try Googling the TYPE of data you have and the NUMBER OF VARIABLES you measured!
   VideoLink: https://www.google.com/
 
 - Class: video
-  Output: Hopefully you found the BINOMIAL TEST. Hit 'yes' to to the web to see how to do this in R.
+  Output: Hopefully you found the BINOMIAL TEST. Hit 'yes' to to the web to see how to do this in R.#I'm not sure what you is exactly meant here
   VideoLink: http://www.instantr.com/2012/11/06/performing-a-binomial-test/
 
 - Class: text

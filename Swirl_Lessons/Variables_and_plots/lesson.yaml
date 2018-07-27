@@ -1,7 +1,7 @@
 - Class: meta
-  Course: Cats_teach_stats
+  Course: CatsTeachStats
   Lesson: Variables_and_plots
-  Author: your name goes here
+  Author: Jenny Hazlehurst, Darcy Taniguchi, and Suann Yang
   Type: Standard
   Organization: your organization's name goes here
   Version: 2.4.3
@@ -60,37 +60,37 @@
   Output: Now you are going to create your own bar plot
   
 - Class: cmd_question
-  Output: In the R console, assign to the variable "rightToLeft" the number 24, an example of right to left paw boops counted.
-  CorrectAnswer: rightToLeft <-24
-  AnswerTests: omnitest(correctExpr='rightToLeft <- 24')
-  Hint: Type rightToLeft <- 24 in the console. Don't forget that R is case sensitive.
+  Output: In the R console, assign to the variable "right" the number 24, an example of right paw boops counted.
+  CorrectAnswer: right <-24
+  AnswerTests: omnitest(correctExpr='right <- 24')
+  Hint: Type right <- 24 in the console. Don't forget that R is case sensitive.
   
 - Class: cmd_question
-  Output: Now assign to the variable "leftToRight" the number 15, an example of the left to right paw boops counted.
-  CorrectAnswer: leftToRight<-15
-  AnswerTests: omnitest(correctExpr='leftToRight<-15')
-  Hint: Type leftToRight <- 15 in the console
+  Output: Now assign to the variable "left" the number 21, an example of the left paw boops counted.
+  CorrectAnswer: left<-21
+  AnswerTests: omnitest(correctExpr='left<-21')
+  Hint: Type left <- 21 in the console
   
 - Class: cmd_question
-  Output: To create your bar plot, type barplot(c(rightToLeft,leftToRight))
-  CorrectAnswer: barplot(c(rightToLeft,leftToRight))
-  AnswerTests: omnitest(correctExpr='barplot(c(rightToLeft,leftToRight))')
-  Hint: Type barplot(c(rightToLeft,leftToRight)) in the console at the command prompt.
+  Output: To create your bar plot, type barplot(c(right,left))
+  CorrectAnswer: barplot(c(right,left))
+  AnswerTests: omnitest(correctExpr='barplot(c(right,left))')
+  Hint: Type barplot(c(right,left)) in the console at the command prompt.
   
 - Class: cmd_question
-  Output: Add labels for each bar by typing in axis(side=1,at=c(1,2),labels=c("rightToLeft","leftToRight"))
-  CorrectAnswer: axis(side=1,at=c(1,2),labels=c("rightToLeft","leftToRight"))
-  AnswerTests: omnitest(correctExpr='axis(side=1,at=c(1,2),labels=c("rightToLeft","leftToRight"))')
-  Hint: Type axis(side=1,at=c(1,2),labels=c("rightToLeft","leftToRight")) at the command prompt.
+  Output: Add labels for each bar by typing in axis(side=1,at=c(1,2),labels=c("right","left"))
+  CorrectAnswer: axis(side=1,at=c(1,2),labels=c("right","left"))
+  AnswerTests: omnitest(correctExpr='axis(side=1,at=c(1,2),labels=c("right","left"))')
+  Hint: Type axis(side=1,at=c(1,2),labels=c("right","left")) at the command prompt.
   
 - Class: text
   Output: The "axis" command means that we are dealing with the axes. The "side=1" refers to the x-axis. The "at" part means at the x tick marks 1 and 2. The lables are the labels for those tick marks.
   
 - Class: cmd_question
-  Output: To add in the x-axis label, type mtext("paw counts",side=1)
-  CorrectAnswer: mtext("paw counts",side=1)
-  AnswerTests: omnitest(correctExpr='mtext("paw counts",side=1)')
-  Hint: Type mtext("paw counts",side=1).  Remember that R is case sensitive
+  Output: To add in the x-axis label, type mtext("paw",side=1)
+  CorrectAnswer: mtext("paw",side=1)
+  AnswerTests: omnitest(correctExpr='mtext("paw",side=1)')
+  Hint: Type mtext("paw",side=1).  Remember that R is case sensitive
   
 
   
