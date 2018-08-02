@@ -84,7 +84,43 @@
   Hint: use x<- c(#L, #R)
 
 - Class: cmd_question
+  Output: YOU ARE READY to run a binomial test in R! Type ?binom.test for a reminder of what the code looks like. You can do this to get help with any funtion in R!
+  CorrectAnswer: ?binom.test
+  AnswerTests: omnitest(correctExpr = '?binom.test')
+  Hint: Check out the Help tab, you may need to switch over from the Plots tab in RStudio.
+
+- Class: cmd_question
   Output: Now, run a binomial test on your data, using the same p and n value. Use the command binom.test() that you looked up on line earlier.
   CorrectAnswer: binom.test(x,n,p)
   AnswerTests: omnitest(correctExpr='binom.test(x,n,p)')
   Hint: Remember, you have already defined the values of x, n, and p. If you still need help, try typing ?binom.test.
+
+- Class: text
+  Output: Let's work on interpreting the output of the binomial test on your data
+  
+- Class: text
+  Output: Remember, you tested the null hypothesis that the probability of a left or right boop was equal, or a probability p=0.5. 
+
+- Class: text
+  Output: The 95 percent confidence interval in your output has calculated two numbers. One is less than the other. Based upon your data, the real probability of WPJ booping in one direction should be between these two values 95% of the time that you observe him. Does 0.5 lie within your confidence interval? 
+
+- Class: text
+  Output: The p-value, or paw-value as famed Catistician WPJ calls it, gives you the probability of getting the same number of left and right boops that you observed if your assumption of p=0.5 in the binomial test is correct.  
+
+- Class: text
+  Output: If your p-value is <0.05, Catisticians agree that it is very unlikely that your assumption, or null hypothesis, is correct. 
+  
+- Class: mult_question
+  Output: If the output of your binomial test has a p-value >0.05, your null hypothesis is...
+  AnswerChoices: Correct, and WPJ does not have a paw preference; Incorrect, and WPJ does have a paw preference
+  CorrectAnswer: Correct, and WPJ does not have a paw preference
+  AnswerTests: omnitest(correctVal='Correct, and WPJ does not have a paw preference')
+  Hint: If your p-value is >0.05, you accept your null hypothesis and reject your alternative hypothesis.
+  
+- Class: mult_question
+  Output: If the output of your binomial test has a p-value <0.05, your null hypothesis is...
+  AnswerChoices: Correct, and WPJ does not have a paw preference; Incorrect, and WPJ does have a paw preference
+  CorrectAnswer: Incorrect, and WPJ does have a paw preference
+  AnswerTests: omnitest(correctVal='Incorrect, and WPJ does have a paw preference')
+  Hint: If your p-value is <0.05, you reject your null hypothesis and accept your alternative hypothesis.
+  
