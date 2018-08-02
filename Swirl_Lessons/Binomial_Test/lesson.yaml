@@ -15,7 +15,7 @@
   CorrectAnswer: binary
   AnswerTests: omnitest(correctVal="binary")
   Hint: A series of trials with outcomes like this is called binomial
-
+#Now that I have stopped to think about it, are we testing the bernoulli distribution? Don't we need lots of independent trials (videos) to do the binomial test?
 - Class: exact_question
   Output: How many different variables did you measure?
   CorrectAnswer: 1
@@ -47,7 +47,7 @@
   CorrectAnswer: 0.5
   AnswerTests: omnitest(correctVal = 0.5)
   Hint: Divide 1 by the number of possible outcomes
-
+#Maybe previous question in the context of handedness preference?
 - Class: exact_question
   Output: Just as an example, let's say that we watch WPJ boop the ball 10 times. In this case, n = ?
   CorrectAnswer: 10
@@ -58,7 +58,7 @@
   Output: Check out this graph of the Binomial Distribution with probability p=0.5 and number of trials n=10!
   Figure: Figure.R
   FigureType: new
-  
+#very cool figure question!  
 - Class: cmd_question
   Output: set a value for n from your data; how many total boops did you observe? Use n <- NUMBER OF BOOPS OBSERVED
   CorrectAnswer: n <- 13
@@ -103,7 +103,7 @@
 
 - Class: text
   Output: The 95 percent confidence interval in your output has calculated two numbers. One is less than the other. Based upon your data, the real probability of WPJ booping in one direction should be between these two values 95% of the time that you observe him. Does 0.5 lie within your confidence interval? 
-
+#Maybe break up these long stretches into one text question per sentence? Also, should we avoid rhetorical questions so the student doesn't think they need to answer it?
 - Class: text
   Output: The p-value, or paw-value as famed Catistician WPJ calls it, gives you the probability of getting the same number of left and right boops that you observed if your assumption of p=0.5 in the binomial test is correct.  
 

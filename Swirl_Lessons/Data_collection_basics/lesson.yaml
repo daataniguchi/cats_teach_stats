@@ -1,9 +1,9 @@
 - Class: meta
-  Course: CatsTeachStats
-  Lesson: Cats1
+  Course: Cats_Teach_Stats
+  Lesson: Data_collection_basics
   Author: Jenny Hazlehurst, Darcy Taniguchi, and Suann Yang
   Type: Standard
-  Organization:
+  Organization: Catisticians Unite!
   Version: 2.4.3
 
 - Class: text
@@ -27,10 +27,10 @@
 
 - Class: text
   Output: First you need to collect some data.
-#What pops up on the console is "Yes or No?" I'd suggest adding to the beginning "Type "Yes" to go to this online video...."
-#I agree
+
+
 - Class: video
-  Output: Go to this online video of me, and count the number of times I use my left vs. right paw to boop the ball around the track.
+  Output: Go to this online video of me, and count the number of times I use my left vs. right paw to boop the ball around the track. Type "Yes" to go to this online video.
   VideoLink: https://drive.google.com/file/d/17TA2HzPbYalYyy4o-TrwZjd8ls-Eyutm/view
 
 - Class: text
@@ -86,12 +86,13 @@
 - Class: text
   Output: We'll make a vector with the c() function. The c stands for "concatenate" or "combine". For example, c(2, 4) makes a vector that has two numbers in it.
 #do we want to capitalize the CAT in concatenate ? Or do I like puns too much?
+
 - Class: cmd_question
   Output: Try making a vector of the left and right variables you made in earlier steps. Use the c() function that you just learned. You know you did it right if you get 24 21
   CorrectAnswer: c(left, right)
   AnswerTests: omnitest(correctExpr='c(left, right)')
-  Hint: go to the help file by typing c?
-#the last question made me think I sould type c(24,21) instead of c(left,right)
+  Hint: Did you type in the values of 24 and 21 instead of the names of the variables that store them? If that didn't help, go to the help file by typing c?
+
 - Class: cmd_question
   Output: Now that you've made a vector of your data, store it in a new variable called boops.
   CorrectAnswer: boops <- c(left, right)
@@ -104,9 +105,8 @@
   AnswerTests: omnitest(correctExpr='boops')
   Hint: Just type "boops" (no quotes).
 
-#Same comment as before about adding in "Type "Yes" to go watch this video on types of data."
 - Class: video
-  Output: We have now recorded some data and communicated the data to R for later use. Let's wrap up by finding out what kind of data we have. Go watch this video on types of data.
+  Output: We have now recorded some data and communicated the data to R for later use. Let's wrap up by finding out what kind of data we have. Type "Yes" to watch this video on types of data.
   VideoLink: https://365datascience.com/explainer-video/types-data/
 
 - Class: mult_question
@@ -115,7 +115,25 @@
   CorrectAnswer: numerical and discrete
   AnswerTests: omnitest(correctVal='numerical and discrete')
   Hint: There is no such thing as half a boop.
-#Good hint
-#To sync with part C binomial test, might be worthwhile to also introduce binomial or binary data type as well?
+
+- Class: mult_question
+  Output: What is the best data classification for the type of boop (left or right)?
+  AnswerChoices: categorical;numerical;continuous
+  CorrectAnswer: categorical
+  AnswerTests: omnitest(correctVal='categorical')
+  Hint: Types of boops can be divided into non-overlapping groups.
+
+- Class: text
+  Output: We can classify type of boop further.
+
+- Class: text
+  Output: When a categorical variable has only two possibilities (e.g., left and right), the data are binary. 
+
+- Class: text
+  Output: We'll work with binary data again in the Binomial Test lesson, so stay tuned.
+  
 - Class: text
   Output: You have reached the end of this lesson on recording and entering a simple data set. Congratulations!
+
+
+
