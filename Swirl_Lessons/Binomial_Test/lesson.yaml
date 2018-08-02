@@ -1,7 +1,7 @@
 - Class: meta
-  Course: CatsTeachStats
-  Lesson: Cats_part3_ver1
-  Author: Jenny Hazlehurst
+  Course: Cats_Teach_Stats
+  Lesson: C_Binomial_Test
+  Author: Jenny Hazlehurst, Darcy Taniguchi, Suann Yang
   Type: Standard
   Organization: Catisticians Unite!
   Version: 2.4.3
@@ -20,17 +20,14 @@
   Output: How many different variables did you measure?
   CorrectAnswer: 1
   AnswerTests: omnitest(correctVal = 1)
-  Hint: You may have measured this variable in different directions, but it is still the same variable...
+  Hint: You may have measured this variable in different directions, but it is still the same variable.
 
-- Class: text
-  Output: To find out what kind of statistical test you need to use to test your hypothesis about your data, a good place to start is a Google search. 
-
-- Class: video#What pops up in r with this question is "Yes or No" which doesn't quite make sense.  Maybe add to the beginning "Type "Yes" to try Googling...." 
-  Output: Try Googling the TYPE of data you have and the NUMBER OF VARIABLES you measured!
+- Class: video
+  Output: To find out what type of statistical test to use, try Googling the TYPE of data you have and the NUMBER OF VARIABLES you measured!
   VideoLink: https://www.google.com/
 
 - Class: video
-  Output: Hopefully you found the BINOMIAL TEST. Hit 'yes' to to the web to see how to do this in R.#I'm not sure what you is exactly meant here
+  Output: Hopefully you found the BINOMIAL TEST. Type Yes to go to the web to see how to do this in R.
   VideoLink: http://www.instantr.com/2012/11/06/performing-a-binomial-test/
 
 - Class: text
@@ -91,4 +88,3 @@
   CorrectAnswer: binom.test(x,n,p)
   AnswerTests: omnitest(correctExpr='binom.test(x,n,p)')
   Hint: Remember, you have already defined the values of x, n, and p. If you still need help, try typing ?binom.test.
-
