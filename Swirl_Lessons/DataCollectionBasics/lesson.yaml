@@ -28,6 +28,7 @@
 - Class: text
   Output: First you need to collect some data.
 #What pops up on the console is "Yes or No?" I'd suggest adding to the beginning "Type "Yes" to go to this online video...."
+#I agree
 - Class: video
   Output: Go to this online video of me, and count the number of times I use my left vs. right paw to boop the ball around the track.
   VideoLink: https://drive.google.com/file/d/17TA2HzPbYalYyy4o-TrwZjd8ls-Eyutm/view
