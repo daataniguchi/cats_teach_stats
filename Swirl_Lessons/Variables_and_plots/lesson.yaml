@@ -18,8 +18,7 @@
   AnswerChoices: Yes; No
   CorrectAnswer: Yes
   AnswerTests: omnitest(correctVal='Yes')
-  Hint: 'Watch the video at the provided link and count how many boops he makes with each paw'
-# Do you want to refer to the previous lesson where they might have seen the video?
+  Hint: 'Watch the video in the lesson Data Collection Basics and count the boops he makes with each paw'
 
 
 - Class: text
@@ -48,20 +47,19 @@
 #we could do a link to a gallery of different types of graphs here, then say that we are going forward with a bar plot
 
 - Class: figure
-  Output: Here is a bar plot indicating how many times a friend (not me) ate cake and gelato this month.
+  Output: Here is a bar plot indicating how many times a friend (not me) ate cat food and sardines this month.
   Figure: example_bar_plot.R
   FigureType: new
-#do we want to make a bar plot example with cat food instead? Though I really like your example.
+
 - Class: mult_question
-  Output: Based on the bar plot, does my friend probably like to eat cake or gelato more?
-  AnswerChoices: cake;gelato
-  CorrectAnswer: gelato
-  AnswerTests: omnitest(correctVal = 'gelato')
-  Hint: Don't you just love Italian desserts?
+  Output: Based on the bar plot, does my friend probably like to eat cat food or sardines more?
+  AnswerChoices: cat food;sardines
+  CorrectAnswer: sardines
+  AnswerTests: omnitest(correctVal = 'sardines')
+  Hint: Mmmmmm fish!!
 
 - Class: text
-  Output: Now you are going to create your own bar plot
-#Maybe remind us what this barplot is for (visualizing boops)?
+  Output: Now you are going to create your own bar plot for visualizing boops.
 
 - Class: cmd_question
   Output: In the R console, assign to the variable "right" the number 21, an example of right paw boops counted.
@@ -80,8 +78,10 @@
   CorrectAnswer: barplot(c(right,left))
   AnswerTests: omnitest(correctExpr='barplot(c(right,left))')
   Hint: Type barplot(c(right,left)) in the console at the command prompt.
-#you could also use the built-in customization within barplot()
-#barplot(c(right, left), names.arg = c("right", "left"), xlab = "Paw", ylab = "Count")
+
+- Class: text
+  Output: A bar plot should have poppped up.  We now need to and labels to it.
+  
 - Class: cmd_question
   Output: Add labels for each bar by typing in axis(side=1,at=c(1,2),labels=c("right","left"))
   CorrectAnswer: axis(side=1,at=c(1,2),labels=c("right","left"))
@@ -91,10 +91,32 @@
 - Class: text
   Output: The "axis" command means that we are dealing with the axes. The "side=1" refers to the x-axis. The "at" part means at the x tick marks 1 and 2. The labels are the labels for those tick marks.
 
+
 - Class: cmd_question
   Output: To add in the x-axis label, type mtext("paw",side=1)
   CorrectAnswer: mtext("paw",side=1)
   AnswerTests: omnitest(correctExpr='mtext("paw",side=1)')
   Hint: Type mtext("paw",side=1).  Remember that R is case sensitive
+  
+- Class: text
+  Output: Alternatively, we could have typed this all together with one command barplot(c(right, left), names.arg = c("right", "left"), xlab = "Paw", ylab = "Count")
 
-#If it's not too long, we could also have them try to plot the data in a different form, say as a line graph, so that they can see which one looks better for presenting the data?  
+- Class: text
+  Output: Now we are going to try a different type of plot called a PIE CHART.
+  
+- Class: text
+  Output: A pie chart divides up a circle proportional to the values in each category.
+  
+- Class: figure
+  Output: Here is an example pie chart indicating how many times my neighbor (not me) ate sardines and trout.
+  Figure: example_pie_chart.R
+  FigureType: new 
+  
+- Class: text
+  Output: Now you are going to create your own pie chart visualizing right and left paw boops.
+  
+- Class: cmd_question
+  Output: To create your pie chart, type pie(c(left,right), labels = c("left","right"), main="Pie chart of boops")
+  CorrectAnswer: pie(c(left,right), labels = c("left","right"), main="Pie chart of boops")
+  AnswerTests: omnitest(correctExpr='pie(c(left,right), labels = c("left","right"), main="Pie chart of boops")')
+  Hint: Type pie(c(left,right), labels = c("left","right"), main="Pie chart of boops") in the console at the command prompt.
