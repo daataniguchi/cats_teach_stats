@@ -22,7 +22,7 @@ Stay tuned for updates!
 
 ## License
 
-Files enclosed are licensed CC BY-SA 4.0 [LICENSE.md](/Swirl_lessons/License.txt) file for details
+Files enclosed are licensed CC BY-SA 4.0 [LICENSE.md](/Swirl_Lessons/LICENSE.txt) file for details
 
 ## Acknowledgments
 
