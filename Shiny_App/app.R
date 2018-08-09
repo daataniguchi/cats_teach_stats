@@ -19,16 +19,16 @@ if (interactive()){
                    fluidRow(h4("Directions"),
                             h5("Watch this video of Catistician Dr. WPJ using his particle accelerator: link"),
                             h5("Count how many times WPJ boops the ball with his right or left paw"),
-                            h5("We will assume that each time he boops the ball, he does so completely independently of the direction he booped the ball before; each boop is an independent trial"))
+                            h5("We will assume that each time he boops the ball, he does so completely independently of the paw he used to boop the ball before; each boop is an independent trial"))
                             ),
           tabPanel("Your Data", 
-                            sidebarPanel(numericInput("LR", "Left to Right Boops", 0, min=0, max=50),
-                                             numericInput("RL", "Right to Left Boops", 0, min=0, max=50),
+                            sidebarPanel(numericInput("LR", "Left Paw Boops", 0, min=0, max=50),
+                                             numericInput("RL", "Right Paw Boops", 0, min=0, max=50),
                                              h4("Boop Sum"),
                                              h5(textOutput("Sum")),
-                                             h4("Proportion of Left to Right Boops"),
+                                             h4("Proportion of Boops with Left Paw"),
                                              h5(textOutput("propLR")),
-                                             h4("Proportion of Right to Left Boops"),
+                                             h4("Proportion of Boops with Right Paw"),
                                              h5(textOutput("propRL"))
                                       ),
                             mainPanel(plotOutput("boopplot"))
@@ -38,7 +38,7 @@ if (interactive()){
                                 h5("Null Hypothesis: No"),
                                 h6("He is equally likely to use both paws"),
                                 h5("Alternative Hypothesis: Yes"),
-                                h6("He has a paw preference"),
+                                h6("He has a left paw preference"),
                                 h5("Binomial Test of our hypothesis"),
                                 h6("paw-value ="),
                                 h4(textOutput("test")),
@@ -61,7 +61,7 @@ if (interactive()){
       boops<- c(input$LR, input$RL)
       barplot(boops,
               main = "Count of Boops",
-              names.arg = c("L-to-R", "R-to-L"),
+              names.arg = c("Left", "Right"),
               xlab = "Direction",
               ylab = "Count",
               col= c("#56B4E9", "#009E73")
@@ -74,7 +74,7 @@ if (interactive()){
        f<- ((LR+RL)/2);
        x<- dbinom(0:sum, size=sum, prob=0.5)
        return(
-         barplot(x,names.arg=0:sum,xlab="Number of LR Boops", ylab="Probability of Outcome", main="Binomial Distribution")
+         barplot(x,names.arg=0:sum,xlab="Number of Left-Pawed Boops", ylab="Probability of Outcome", main="Binomial Distribution")
        )
      })
   }
