@@ -12,7 +12,7 @@ if (interactive()){
   
   ui <- fluidPage(
     #titlePanel("Cats teach Stats",img(src = "kitty2.png", height = 100)),
-    titlePanel(title=div(img(src="kitty2.png", height=100), "Cats teach Stats!", img(src="kitty3.jpg", height=100))),
+    titlePanel("Cats teach Stats!"),
     #titlePanel("Cats teach Stats"),
     sidebarLayout(
       sidebarPanel(numericInput("LR", "Left to Right Boops", 0, min=0, max=50),
