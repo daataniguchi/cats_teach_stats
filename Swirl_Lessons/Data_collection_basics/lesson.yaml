@@ -31,7 +31,7 @@
 
 - Class: video
   Output: Go to this online video of me, and count the number of times I use my left vs. right paw to boop the ball around the track. Type "Yes" to go to this online video.
-  VideoLink: https://drive.google.com/file/d/17TA2HzPbYalYyy4o-TrwZjd8ls-Eyutm/view
+  VideoLink: https://www.youtube.com/watch?v=lW9Lmh3D4cY&feature=youtu.be
 
 - Class: text
   Output: Got your counts of left and right paw usage? If not, go watch the video again.
@@ -127,13 +127,10 @@
   Output: We can classify type of boop further.
 
 - Class: text
-  Output: When a categorical variable has only two possibilities (e.g., left and right), the data are binary. 
+  Output: When a categorical variable has only two possibilities (e.g., left and right), the data are binary.
 
 - Class: text
   Output: We'll work with binary data again in the Binomial Test lesson, so stay tuned.
-  
+
 - Class: text
   Output: You have reached the end of this lesson on recording and entering a simple data set. Congratulations!
-
-
-
