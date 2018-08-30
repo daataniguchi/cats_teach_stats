@@ -6,7 +6,9 @@ Cats are the purrrrfect stats teachers, and everyone loves watching cute animal 
 
 ## Getting Started
 
-Stay tuned for updates!
+Please enjoy our feature film, WPJ and the Particle Accelerator, which pairs with the Shiny app and the Swirl lesson. Click [here](https://www.youtube.com/watch?v=lW9Lmh3D4cY&feature=youtu.be) to watch it on YouTube. 
+
+Stay tuned for updates when we officially launch our Shiny app!
 
 ### Built With
 
