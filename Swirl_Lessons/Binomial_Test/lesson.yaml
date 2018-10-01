@@ -1,11 +1,11 @@
 - Class: meta
   Course: Cats_Teach_Stats
-  Lesson: C_Binomial_Test
+  Lesson: Binomial_Test
   Author: Jenny Hazlehurst, Darcy Taniguchi, Suann Yang
   Type: Standard
   Organization: Catisticians Unite!
   Version: 2.4.3
-  
+
 - Class: text
   Output: Now that you know WHY we need statistics, let's TRY some statistics
 
@@ -14,8 +14,8 @@
   AnswerChoices: binary;continuous;discrete
   CorrectAnswer: binary
   AnswerTests: omnitest(correctVal="binary")
-  Hint: A series of trials with outcomes like this is called binomial
-#Now that I have stopped to think about it, are we testing the bernoulli distribution? Don't we need lots of independent trials (videos) to do the binomial test?
+  Hint: Binary data has only two possible outcomes, kind of like a left or right paw choice...
+
 - Class: exact_question
   Output: How many different variables did you measure?
   CorrectAnswer: 1
@@ -26,28 +26,31 @@
   Output: To find out what type of statistical test to use, try Googling the TYPE of data you have and the NUMBER OF VARIABLES you measured!
   VideoLink: https://www.google.com/
 
+- Class: text
+  Output: Hopefully you found the BINOMIAL TEST. If you did not, that's okay! There are often many approaches to a statistical problem.
+
 - Class: video
-  Output: Hopefully you found the BINOMIAL TEST. Type Yes to go to the web to see how to do this in R.
+  Output: Type Yes to go to the web to see how to do this in R.
   VideoLink: http://www.instantr.com/2012/11/06/performing-a-binomial-test/
 
 - Class: text
   Output: The binomial test will compare your data to a binomial distribution, which shows the probability of obtaining a certain outcome (in our case, a left boop or a right boop) a given number of times out of the total trials you conducted.
 
 - Class: text
-  Output: The binomial distribution you compare your data to with a binomial test will change depending on two variables, p (probability of the outcome of interest - say, a Left boop - if all outcomes are equally likely) and n (the number of trials; how many boop events did you observe?) 
+  Output: The binomial distribution you compare your data to with a binomial test will change depending on two variables, p (probability of the outcome of interest - say, a Left boop - if all outcomes are equally likely) and n (the number of trials; how many boop events did you observe?)
 
 - Class: exact_question
   Output: Let's start by figuring out how to calculate our probability "p"; If we assume that WPJ will always boop the ball, what is the probability that he will boop the ball?
   CorrectAnswer: 1
   AnswerTests: omnitest(correctVal = 1)
-  Hint: If something will definitely happen, it has a 100% chance of occurring or a probability of 1. 
-  
+  Hint: If something will definitely happen, it has a 100% chance of occurring or a probability of 1.
+
 - Class: exact_question
-  Output: If we assume that WPJ is equally likely to boop either left or right (2 possible outcomes), what is the probability of a Left Boop? 
+  Output: If we assume that WPJ has no handedness preference, and is therefore equally likely to boop either left or right (2 possible outcomes), what is the probability of a Left Boop?
   CorrectAnswer: 0.5
   AnswerTests: omnitest(correctVal = 0.5)
   Hint: Divide 1 by the number of possible outcomes
-#Maybe previous question in the context of handedness preference?
+
 - Class: exact_question
   Output: Just as an example, let's say that we watch WPJ boop the ball 10 times. In this case, n = ?
   CorrectAnswer: 10
@@ -58,7 +61,7 @@
   Output: Check out this graph of the Binomial Distribution with probability p=0.5 and number of trials n=10!
   Figure: Figure.R
   FigureType: new
-#very cool figure question!  
+
 - Class: cmd_question
   Output: set a value for n from your data; how many total boops did you observe? Use n <- NUMBER OF BOOPS OBSERVED
   CorrectAnswer: n <- 13
@@ -84,39 +87,45 @@
   Hint: use x<- c(#L, #R)
 
 - Class: cmd_question
-  Output: YOU ARE READY to run a binomial test in R! Type ?binom.test for a reminder of what the code looks like. You can do this to get help with any funtion in R!
+  Output: YOU ARE READY to run a binomial test in R! Type ?binom.test for a reminder of what the code looks like.
   CorrectAnswer: ?binom.test
   AnswerTests: omnitest(correctExpr = '?binom.test')
   Hint: Check out the Help tab, you may need to switch over from the Plots tab in RStudio.
 
+- Class: text
+  Output: Did you know, you can type ? in front of a function, just like you did in the last question, to get help with any function in R!
+
 - Class: cmd_question
   Output: Now, run a binomial test on your data, using the same p and n value. Use the command binom.test() that you looked up on line earlier.
   CorrectAnswer: binom.test(x,n,p)
-  AnswerTests: omnitest(correctExpr='binom.test(x,n,p)')
+  AnswerTests: any_of_exprs(c('binom.test(x,n,p)'))
   Hint: Remember, you have already defined the values of x, n, and p. If you still need help, try typing ?binom.test.
 
 - Class: text
   Output: Let's work on interpreting the output of the binomial test on your data
-  
-- Class: text
-  Output: Remember, you tested the null hypothesis that the probability of a left or right boop was equal, or a probability p=0.5. 
 
 - Class: text
-  Output: The 95 percent confidence interval in your output has calculated two numbers. One is less than the other. Based upon your data, the real probability of WPJ booping in one direction should be between these two values 95% of the time that you observe him. Does 0.5 lie within your confidence interval? 
-#Maybe break up these long stretches into one text question per sentence? Also, should we avoid rhetorical questions so the student doesn't think they need to answer it?
-- Class: text
-  Output: The p-value, or paw-value as famed Catistician WPJ calls it, gives you the probability of getting the same number of left and right boops that you observed if your assumption of p=0.5 in the binomial test is correct.  
+  Output: Remember, you tested the null hypothesis that the probability of a left or right boop was equal, or a probability p=0.5.
 
 - Class: text
-  Output: If your p-value is <0.05, Catisticians agree that it is very unlikely that your assumption, or null hypothesis, is correct. 
-  
+  Output: The 95 percent confidence interval in your output has calculated two numbers. One is less than the other.
+
+- Class: text
+  Output: Based upon your data, the real probability of WPJ booping in one direction should be between these two values 95% of the time that you observe him.
+
+- Class: text
+  Output: The p-value, or paw-value as famed Catistician WPJ calls it, gives you the probability of getting the same number of left and right boops that you observed if your assumption of p=0.5 in the binomial test is correct.
+
+- Class: text
+  Output: If your p-value is <0.05, Catisticians agree that it is very unlikely that your assumption, or null hypothesis, is correct.
+
 - Class: mult_question
-  Output: If the output of your binomial test has a p-value >0.05, your null hypothesis is...
+  Output: If the output of your binomial test has a p-value > than or = to 0.05, your null hypothesis is...
   AnswerChoices: Correct, and WPJ does not have a paw preference; Incorrect, and WPJ does have a paw preference
   CorrectAnswer: Correct, and WPJ does not have a paw preference
   AnswerTests: omnitest(correctVal='Correct, and WPJ does not have a paw preference')
   Hint: If your p-value is >0.05, you accept your null hypothesis and reject your alternative hypothesis.
-  
+
 - Class: mult_question
   Output: If the output of your binomial test has a p-value <0.05, your null hypothesis is...
   AnswerChoices: Correct, and WPJ does not have a paw preference; Incorrect, and WPJ does have a paw preference
