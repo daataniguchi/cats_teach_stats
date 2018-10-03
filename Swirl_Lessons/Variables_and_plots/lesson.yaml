@@ -19,7 +19,7 @@
 
 
 - Class: text
-  Output: You just dealt two groups of variables--type of boop (left or right paw) and boop counts
+  Output: You just dealt with two groups of variables--type of boop (left or right paw) and boop counts
 
 - Class: mult_question
   Output: Are the boop counts an example of a dependent (response) variable or an independent (explanatory) variable?
@@ -34,7 +34,7 @@
   Hint: 'Think about the answer to the previous question and how it relates to this question.'
 
 - Class: text
-  Output: Now that we know what variables we are working with, we are going to try explore how to visualize that data you collected.
+  Output: Now that we know what kind of variables we are working with, we are going to try explore how to visualize that data you collected.
 
 - Class: text
   Output: Visualizing data is important because it adds to our understanding of how the data related to one another and can aid in other analyses.
@@ -49,21 +49,21 @@
 
 - Class: text
   Output: Those are great, but today we are going to start with some simple plots.
-  
+
 - Class: text
   Output: We are going to try a type of plot called a PIE CHART.
-  
+
 - Class: text
   Output: A pie chart divides up a circle proportional to the values in each category.
-  
+
 - Class: figure
   Output: Here is an example pie chart indicating how many times my neighbor (not me) ate sardines and trout.
   Figure: example_pie_chart.R
-  FigureType: new 
-  
+  FigureType: new
+
 - Class: text
   Output: Now you are going to create your own pie chart visualizing right and left paw boops.
-  
+
 - Class: cmd_question
   Output: In the R console, assign to the variable "right" the number 21, an example of right paw boops counted.
   CorrectAnswer: right <-21
@@ -76,14 +76,14 @@
   AnswerTests: omnitest(correctExpr='left<-24')
   Hint: Type left <- 24 in the console
 
-  
+
 - Class: cmd_question
   Output: To create your pie chart, type pie(c(left,right), labels = c("left","right"), main="Pie chart of boops")
   CorrectAnswer: pie(c(left,right), labels = c("left","right"), main="Pie chart of boops")
   AnswerTests: omnitest(correctExpr='pie(c(left,right), labels = c("left","right"), main="Pie chart of boops")')
   Hint: Type pie(c(left,right), labels = c("left","right"), main="Pie chart of boops") in the console at the command prompt.
 
-  
+
 - Class: text
   Output: Now we are going to create a different plot called a BAR PLOT. In this plot, categories appear on one axis and the value for each category is used to determine the height of the bar for that category.
 
@@ -110,11 +110,12 @@
 
 - Class: text
   Output: A bar plot should have poppped up.  However, there are no labels.  So, we are going to add things (arguments) to our previous command.
-  
+
 - Class: cmd_question
   Output: Type the following into the console barplot(c(right, left), names.arg = c("right", "left"), xlab = "Paw", ylab = "Count")
   CorrectAnswer: barplot(c(right, left), names.arg = c("right", "left"), xlab = "Paw", ylab = "Count")
   AnswerTests: omnitest(correctExpr='barplot(c(right, left), names.arg = c("right", "left"), xlab = "Paw", ylab = "Count")')
   Hint: Type barplot(c(right, left), names.arg = c("right", "left"), xlab = "Paw", ylab = "Count") at the command prompt.
 
-
+- Class: text
+  Output: Congratulations! You have completed the lesson on making a few simple graphs.

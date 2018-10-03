@@ -36,9 +36,11 @@
 - Class: text
   Output: Got your counts of left and right paw usage? If not, go watch the video again.
 
+- Class: text
+  Output: To record our data set into R, we create variables. What is a variable? First, think about a computer program like a story. A variable is like the character in a story. and has a name and attributes.
 
 - Class: text
-  Output: You will store your left paw count and right paw count into two separate variables.
+  Output: Once you have created variables, you can make R do things with the variables, just like a writer makes characters do things in a story.
 
 - Class: text
   Output: There are two components to a variable.
@@ -49,6 +51,12 @@
 - Class: text
   Output: The information that we want to store is the second part.
 
+- Class: text
+  Output: Just like in a story, where a character can be complex with lots of attributes, a variable can be used to store a lot of data. But here we are going to make variables that store small amounts of data.
+
+- Class: text
+  Output: We are going to make a variable called left, and another one called right to store your left paw count and right paw count, respectively.
+
 - Class: cmd_question
   Output: Let's pretend that I used my left paw twice. Make a variable of this left paw count by typing left <- 2
   CorrectAnswer: left <- 2
@@ -58,9 +66,8 @@
 - Class: text
   Output: So what you just did was make a variable called "left," which stores the number 2.
 
-
 - Class: cmd_question
-  Output: OK, now let's store your real data into variables! First, remake the left variable but use the real left paw count you made from the video.
+  Output: OK, now let's store your real data into variables! Remake the left variable but use the real left paw count you made from the video.
   CorrectAnswer: left <- 24
   AnswerTests: omnitest(correctExpr='left <- 24')
   Hint: check your count - you should have found 24 left-paw boops
@@ -78,7 +85,7 @@
   Hint: check your count - you should have found 21 right-paw boops. right <- 21
 
 - Class: text
-  Output: Variables can be many kinds of things. We can make a variable that stores left and right paw counts in that order.
+  Output: Variables can be many kinds of things. We can make a variable that stores both left and right paw counts in that order.
 
 - Class: text
   Output: This kind of variable, when multiple things are stored in it, is called a vector.
@@ -88,19 +95,19 @@
 #do we want to capitalize the CAT in concatenate ? Or do I like puns too much?
 
 - Class: cmd_question
-  Output: Try making a vector of the left and right variables you made in earlier steps. Use the c() function that you just learned. You know you did it right if you get 24 21
+  Output: Try making a vector of the left and right variables you made in earlier steps. Use the c() function that you just learned. You should see 24 21
   CorrectAnswer: c(left, right)
   AnswerTests: omnitest(correctExpr='c(left, right)')
   Hint: Did you type in the values of 24 and 21 instead of the names of the variables that store them? If that didn't help, go to the help file by typing c?
 
 - Class: cmd_question
-  Output: Now that you've made a vector of your data, store it in a new variable called boops.
+  Output: Now you know how made a vector of your data! But we haven't actually made it into a variable, becase we haven't given it a name. Make a variable called boops, and store the vector c(left, right) into it.
   CorrectAnswer: boops <- c(left, right)
   AnswerTests: omnitest(correctExpr='boops <- c(left, right)')
   Hint: boops should be on the left side of the <- symbol, and c(left, right) comes next
 
 - Class: cmd_question
-  Output: Check to see what R thinks is stored in your boops variable.
+  Output: Check to see what R thinks is stored in your boops variable by typing its name.
   CorrectAnswer: boops
   AnswerTests: omnitest(correctExpr='boops')
   Hint: Just type "boops" (no quotes).
