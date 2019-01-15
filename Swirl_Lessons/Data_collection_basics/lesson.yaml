@@ -91,7 +91,7 @@
   Output: Try making a vector of the left and right variables you made in earlier steps. Use the c() function that you just learned. You know you did it right if you get 24 21
   CorrectAnswer: c(left, right)
   AnswerTests: omnitest(correctExpr='c(left, right)')
-  Hint: Did you type in the values of 24 and 21 instead of the names of the variables that store them? If that didn't help, go to the help file by typing c?
+  Hint: Did you type in the values of 24 and 21 instead of the names of the variables that store them? If that didn't help, go to the help file by typing c. If that still did not work, type in c(left,right)
 
 - Class: cmd_question
   Output: Now that you've made a vector of your data, store it in a new variable called boops.
